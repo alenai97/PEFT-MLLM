@@ -1,7 +1,8 @@
 # PEFT-MLLM
+
 Official Code and data for ACL 2024 finding, "An Empirical Study on Parameter-Efficient Fine-Tuning for MultiModal Large Language Models".
 
-
+Paper link: [https://arxiv.org/abs/2406.05130](https://arxiv.org/abs/2406.05130)
 
 ## Install
 
@@ -55,15 +56,17 @@ Please download those datasets: ScienceQA, Flickr30K, IconQA, Vizwiz, OCRVQA, OK
     └── fill_in_blank
 ```
 
-The data format please refer to [LLaVA](https://github.com/haotian-liu/LLaVA/blob/main/docs/Finetune_Custom_Data.md) and [Qwen-VL](https://github.com/QwenLM/Qwen-VL).
+The data format please refer to [LLaVA](https://github.com/haotian-liu/LLaVA/blob/main/docs/Finetune_Custom_Data.md) and [Qwen-VL](https://github.com/QwenLM/Qwen-VL). 
+
+You can also follow the data format in [`datasets/scienceqa/train_sqa_llava.json`] and [`datasets/scienceqa/train_sqa_qwen.json`].
 
 2. Start fine-tuning
 
-You can find all the scripts in [`scirpts`](https://github.com/alenai97/PEFT-MLLM/tree/main/scripts). For example, just start with [`scripts/llava/peft_lora.sh`](https://github.com/alenai97/PEFT-MLLM/blob/main/scripts/llava/peft_lora.sh).
+You can find all the training scripts in [`scirpts`](https://github.com/alenai97/PEFT-MLLM/tree/main/scripts). For example, just start with [`scripts/llava/peft_lora.sh`](https://github.com/alenai97/PEFT-MLLM/blob/main/scripts/llava/peft_lora.sh).
 
 For freeze the connector, please add:
 
---`freeze_mm_mlp_adapter True`: for LLaVA-1.5 and ShareGPT4v.
+--`freeze_mm_mlp_adapter True`: for LLaVA-1.5 and ShareGPT4V.
 
 --`freeze_connector True`: for Qwen-VL-Chat.
 
