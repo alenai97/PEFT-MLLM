@@ -18,15 +18,20 @@ conda create -n peft-mllm python=3.10 -y
 conda activate peft-mllm
 pip install --upgrade pip
 pip install -e.
-pip install -e ".[train]"
 pip install flash-attn --no-build-isolation
 ```
 
 3. Additional packages
+
+PEFT
 ```bash
 cd peft
 pip install -e.
 cd ..
+```
+
+transformers
+```bash
 cd transformers
 pip install -e.
 cd ..

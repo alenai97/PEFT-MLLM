@@ -458,18 +458,33 @@ def train():
     config.use_cache = False
 
     # Load model and tokenizer
-    model = transformers.AutoModelForCausalLM.from_pretrained(
-        model_args.model_name_or_path,
-        config=config,
-        cache_dir=training_args.cache_dir,
-        device_map=device_map,
-        trust_remote_code=True,
-        quantization_config=GPTQConfig(
-            bits=4, disable_exllama=True
+    if training_args.prefix_enable:
+        model_args.model_name_or_path = "model/qwen-vl-chat-prefix"
+        model = transformers.AutoModelForCausalLM.from_pretrained(
+            model_args.model_name_or_path,
+            config=config,
+            cache_dir=training_args.cache_dir,
+            device_map=device_map,
+            trust_remote_code=True,
+            quantization_config=GPTQConfig(
+                bits=4, disable_exllama=True
+            )
+            if training_args.lora_enable and lora_args.q_lora
+            else None,
         )
-        if training_args.lora_enable and lora_args.q_lora
-        else None,
-    )
+    else:
+        model = transformers.AutoModelForCausalLM.from_pretrained(
+            model_args.model_name_or_path,
+            config=config,
+            cache_dir=training_args.cache_dir,
+            device_map=device_map,
+            trust_remote_code=True,
+            quantization_config=GPTQConfig(
+                bits=4, disable_exllama=True
+            )
+            if training_args.lora_enable and lora_args.q_lora
+            else None,
+        )
 
     # if (not training_args.lora_enable and not training_args.adapter_enable and
     # not training_args.ia3_enable and not training_args.prefix_enable and
