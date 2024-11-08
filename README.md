@@ -60,8 +60,10 @@ The data format please refer to [LLaVA](https://github.com/haotian-liu/LLaVA/blo
 You can find all the scripts in `scirpts`. For example, just run [`scripts/llava/peft_lora.sh`](https://github.com/alenai97/PEFT-MLLM/blob/main/scripts/llava/peft_lora.sh).
 
 For freeze the connector, adding
---`freeze_mm_mlp_adapter True`: for LLaVA-1.5 and ShareGPT4v
---`freeze_connector True`: for Qwen-VL-Chat
+
+--`freeze_mm_mlp_adapter True`: for LLaVA-1.5 and ShareGPT4v.
+
+--`freeze_connector True`: for Qwen-VL-Chat.
 
 ## Evaluation
 
