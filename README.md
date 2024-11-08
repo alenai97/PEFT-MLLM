@@ -59,7 +59,7 @@ The data format please refer to [LLaVA](https://github.com/haotian-liu/LLaVA/blo
 
 2. Start fine-tuning
 
-You can find all the scripts in `scirpts`. For example, just run [`scripts/llava/peft_lora.sh`](https://github.com/alenai97/PEFT-MLLM/blob/main/scripts/llava/peft_lora.sh).
+You can find all the scripts in [`scirpts`](https://github.com/alenai97/PEFT-MLLM/tree/main/scripts). For example, just start with [`scripts/llava/peft_lora.sh`](https://github.com/alenai97/PEFT-MLLM/blob/main/scripts/llava/peft_lora.sh).
 
 For freeze the connector, please add:
 
@@ -73,7 +73,7 @@ The code of evaluation will be updated soon.
 
 ## Citation
 
-```bash
+```bibtex
 @misc{zhou2024empiricalstudyparameterefficientfinetuning,
       title={An Empirical Study on Parameter-Efficient Fine-Tuning for MultiModal Large Language Models}, 
       author={Xiongtao Zhou and Jie He and Yuhua Ke and Guangyao Zhu and Víctor Gutiérrez-Basulto and Jeff Z. Pan},
