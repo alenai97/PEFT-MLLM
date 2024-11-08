@@ -71,7 +71,11 @@ For freeze the connector, please add:
 
 The code of evaluation will be updated soon.
 
+
+
 📅 **Plan**: We plan to implement additional PEFT methods for the MLLM community in the future.
+
+
 
 ## Citation
 
