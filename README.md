@@ -14,8 +14,8 @@ cd PEFT-MLLM
 
 2. Install dependencies
 ```bash
-conda create -n peftmllm python=3.10 -y
-conda activate peftmllm
+conda create -n peft-mllm python=3.10 -y
+conda activate peft-mllm
 pip install --upgrade pip
 pip install -e.
 pip install -e ".[train]"
