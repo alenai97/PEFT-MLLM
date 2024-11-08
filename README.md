@@ -29,4 +29,40 @@ pip install -e.
 cd ..
 ```
 
-## 
+## Train
+
+1. Data Preparation
+
+Please download those datasets: ScienceQA, Flickr30K, IconQA, Vizwiz, OCRVQA, OKVQA and VQAv2, and organize them as follow in `datasets`.
+
+```
+├── scienceqa
+│   └── train
+├── flickr30k
+│   └── train
+├── vizwiz
+│   └── train
+├── okvqa
+│   └── train
+├── ocrvqa
+│   └── train
+├── vqav2
+│   └── train
+└── iconqa
+    ├── choose_txt
+    └── fill_in_blank
+```
+
+The data format please refer to [LLaVA](https://github.com/haotian-liu/LLaVA/blob/main/docs/Finetune_Custom_Data.md) and [Qwen-VL](https://github.com/QwenLM/Qwen-VL).
+
+2. Start fine-tuning
+
+You can find all the scripts in `scirpts`. For example, just run [`scripts/llava/peft_lora.sh`](https://github.com/alenai97/PEFT-MLLM/blob/main/scripts/llava/peft_lora.sh).
+
+For freeze the connector, adding
+--`freeze_mm_mlp_adapter True`: for LLaVA-1.5 and ShareGPT4v
+--`freeze_connector True`: for Qwen-VL-Chat
+
+## Evaluation
+
+The code of evaluation will be updated soon.
