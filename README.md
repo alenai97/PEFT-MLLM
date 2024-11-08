@@ -58,7 +58,7 @@ Please download those datasets: ScienceQA, Flickr30K, IconQA, Vizwiz, OCRVQA, OK
 
 The data format please refer to [LLaVA](https://github.com/haotian-liu/LLaVA/blob/main/docs/Finetune_Custom_Data.md) and [Qwen-VL](https://github.com/QwenLM/Qwen-VL). 
 
-You can also follow the data format in [`datasets/scienceqa/train_sqa_llava.json`] and [`datasets/scienceqa/train_sqa_qwen.json`].
+You can also follow the data format in `datasets/scienceqa/train_sqa_llava.json` and `datasets/scienceqa/train_sqa_qwen.json`.
 
 2. Start fine-tuning
 
