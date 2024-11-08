@@ -24,7 +24,7 @@ DISTRIBUTED_ARGS="
 "
 
 torchrun $DISTRIBUTED_ARGS qwen/finetune_peft.py \
-    --model_name_or_path /mnt/ceph_rbd/model/Qwen-VL-Chat \
+    --model_name_or_path $MODEL \
     --data_path $DATA \
     --bf16 True \
     --output_dir checkpoints/qwen-vl-chat/sqa/qwen-sqa-adapter \
@@ -50,7 +50,7 @@ torchrun $DISTRIBUTED_ARGS qwen/finetune_peft.py \
     --deepspeed scripts/qwen/ds_config_zero2.json &&
 
 torchrun $DISTRIBUTED_ARGS qwen/finetune_peft.py \
-    --model_name_or_path /mnt/ceph_rbd/model/Qwen-VL-Chat \
+    --model_name_or_path $MODEL \
     --data_path $DATA \
     --bf16 True \
     --output_dir checkpoints/qwen-vl-chat/sqa/qwen-sqa-lora \
@@ -76,7 +76,7 @@ torchrun $DISTRIBUTED_ARGS qwen/finetune_peft.py \
     --deepspeed scripts/qwen/ds_config_zero2.json &&
 
 torchrun $DISTRIBUTED_ARGS qwen/finetune_peft.py \
-    --model_name_or_path /mnt/ceph_rbd/model/Qwen-VL-Chat \
+    --model_name_or_path $MODEL \
     --data_path $DATA \
     --bf16 True \
     --output_dir checkpoints/qwen/sqa/qwen-sqa-ia3 \

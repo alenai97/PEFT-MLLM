@@ -4,7 +4,7 @@ export WANDB_API_KEY="YOUR_API_KEY"
 DIR=`pwd`
 
 
-# MODEL="Qwen/Qwen-VL-Chat" #"Qwen/Qwen-VL-Chat"/"Qwen/Qwen-VL" # Set the path if you do not want to load from huggingface directly
+MODEL="Qwen/Qwen-VL-Chat" #"Qwen/Qwen-VL-Chat"/"Qwen/Qwen-VL" # Set the path if you do not want to load from huggingface directly
 # ATTENTION: specify the path to your training data, which should be a json file consisting of a list of conversations.
 # See the section for finetuning in README for more information.
 DATA="datasets/scienceqa/train_sqa_qwen.json"
@@ -13,7 +13,7 @@ DATA="datasets/scienceqa/train_sqa_qwen.json"
 export CUDA_VISIBLE_DEVICES=0
 
 python qwen/finetune_peft.py \
-    --model_name_or_path /mnt/ceph_rbd/model/Qwen-VL-Chat \
+    --model_name_or_path $MODEL \
     --data_path $DATA \
     --bf16 True \
     --output_dir checkpoints/qwen-vl-chat/sqa/qwen-sqa-lora \
