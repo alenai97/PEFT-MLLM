@@ -1,6 +1,6 @@
 #!/bin/bash
 export CUDA_DEVICE_MAX_CONNECTIONS=1
-export WANDB_API_KEY="e2b95b4cc5d9465488bc60df257e0b9d2029ba5b"
+export WANDB_API_KEY="YOUR_API_KEY"
 DIR=`pwd`
 
 
