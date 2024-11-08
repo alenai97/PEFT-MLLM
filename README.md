@@ -26,7 +26,7 @@ pip install flash-attn --no-build-isolation
 cd peft
 pip install -e.
 cd ..
-cd transformers-4.33.0
+cd transformers
 pip install -e.
 cd ..
 ```
@@ -87,4 +87,4 @@ The code of evaluation will be updated soon.
 
 ## Acknowledgement
 
-Thanks for those outstanding works: [LLaVA](https://github.com/haotian-liu/LLaVA/tree/main), [Qwen-VL](https://github.com/QwenLM/Qwen-VL), [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V), [PEFT](https://github.com/huggingface/peft) and [LLM-Adapters](https://github.com/AGI-Edgerunners/LLM-Adapters/tree/main)!
+Thanks for thse outstanding works: [LLaVA](https://github.com/haotian-liu/LLaVA/tree/main), [Qwen-VL](https://github.com/QwenLM/Qwen-VL), [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V), [PEFT](https://github.com/huggingface/peft) and [LLM-Adapters](https://github.com/AGI-Edgerunners/LLM-Adapters/tree/main)!
