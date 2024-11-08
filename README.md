@@ -6,7 +6,7 @@ Paper link: [https://arxiv.org/abs/2406.05130](https://arxiv.org/abs/2406.05130)
 
 ## Install
 
-1. Clone this reposity
+1. Clone this repository
 ```bash
 git clone https://github.com/alenai97/PEFT-MLLM.git
 cd PEFT-MLLM
@@ -58,7 +58,9 @@ Please download those datasets: ScienceQA, Flickr30K, IconQA, Vizwiz, OCRVQA, OK
 │   └── train
 └── iconqa
     ├── choose_txt
+    │   └── train
     └── fill_in_blank
+        └── train
 ```
 
 The data format please refer to [LLaVA](https://github.com/haotian-liu/LLaVA/blob/main/docs/Finetune_Custom_Data.md) and [Qwen-VL](https://github.com/QwenLM/Qwen-VL). 
@@ -101,4 +103,4 @@ The code of evaluation will be updated soon.
 
 ## Acknowledgement
 
-Thanks for these outstanding works: [LLaVA](https://github.com/haotian-liu/LLaVA/tree/main), [Qwen-VL](https://github.com/QwenLM/Qwen-VL), [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V), [PEFT](https://github.com/huggingface/peft) and [LLM-Adapters](https://github.com/AGI-Edgerunners/LLM-Adapters/tree/main)!
+Thanks for these outstanding works: [LLaVA](https://github.com/haotian-liu/LLaVA/tree/main), [Qwen-VL](https://github.com/QwenLM/Qwen-VL), [ShareGPT4V](https://github.com/ShareGPT4Omni/ShareGPT4V), [PEFT](https://github.com/huggingface/peft) and [LLM-Adapters](https://github.com/AGI-Edgerunners/LLM-Adapters/tree/main).
