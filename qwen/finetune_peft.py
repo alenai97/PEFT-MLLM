@@ -541,7 +541,7 @@ def train():
             bottleneck_size=adapter_args.bottleneck_size,
             adapter_dropout=adapter_args.adapter_dropout,
             use_parallel_adapter=adapter_args.use_parallel_adapter,
-            adapter_enablep=adapter_args.adapter_enablep,
+            use_adapterp=adapter_args.use_adapterp,
             target_modules=find_adapter_linear_names(model),
             bias=adapter_args.adapter_bias,
             task_type="CAUSAL_LM"
