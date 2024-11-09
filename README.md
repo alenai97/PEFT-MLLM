@@ -4,6 +4,10 @@ Official Code and data for ACL 2024 finding, "An Empirical Study on Parameter-Ef
 
 Paper link: [https://arxiv.org/abs/2406.05130](https://arxiv.org/abs/2406.05130)
 
+<p align="center">
+<img src=images/main_fig.pdf  width="80%" height="60%">
+</p>
+
 ## Install
 
 1. Clone this repository
