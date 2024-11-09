@@ -17,10 +17,10 @@ dependencies = [
     "tokenizers>=0.12.1,<0.14", "tiktoken",
     "sentencepiece==0.1.99", "shortuuid",
     "accelerate==0.21.0", "bitsandbytes==0.41.0",
-    "pydantic<2,>=1", "markdown2[all]", "numpy", "scikit-learn==1.2.2",
+    "pydantic<2,>=1", "markdown2[all]", "numpy==1.26.2", "scikit-learn==1.2.2",
     "gradio==3.35.2", "gradio_client==0.2.9",
     "requests", "httpx==0.24.0", "uvicorn", "fastapi",
-    "einops==0.6.1", "einops-exts==0.0.4", "timm==0.6.13",
+    "einops==0.6.1", "einops-exts==0.0.4", "timm==0.6.13", "torchprof==0.3.0"
     "transformers_stream_generator==0.0.4", "pillow", "tensorboard", "matplotlib",
     "deepspeed==0.9.5", "ninja", "wandb",
 ]

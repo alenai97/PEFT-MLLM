@@ -363,8 +363,9 @@ class Linear(nn.Linear, AdapterLayer):
                 expected_dtype = torch.bfloat16
                 residual = x
 
-                if x.dtype != torch.float32:
-                    x = x.float()
+                # if x.dtype != torch.float32:
+                #     x = x.float()
+
                 output = self.adapter_up(self.act_fn(self.adapter_down(self.adapter_dropout(x)))).to(expected_dtype) * self.adapter_scaling
 
                 output = output + residual
@@ -377,8 +378,8 @@ class Linear(nn.Linear, AdapterLayer):
                 residual = x
                 residual = residual.to(torch.bfloat16)
                 
-                if x.dtype != torch.float32:
-                    x = x.float()
+                # if x.dtype != torch.float32:
+                #     x = x.float()
 
                 output = self.adapter_up(self.act_fn(self.adapter_down(self.adapter_dropout(x)))).to(expected_dtype) * self.adapter_scaling
 
@@ -389,8 +390,9 @@ class Linear(nn.Linear, AdapterLayer):
                 result = F.linear(x, self.weight, bias=self.bias)
                 expected_dtype = result.dtype
 
-                if x.dtype != torch.float32:
-                    x = x.float()
+                # if x.dtype != torch.float32:
+                #     x = x.float()
+
                 output = self.adapter_up(self.act_fn(self.adapter_down(self.adapter_dropout(x)))).to(expected_dtype) * self.adapter_scaling
 
                 result = result + output
@@ -483,8 +485,8 @@ if is_bnb_available():
                     if not torch.is_autocast_enabled():
                         expected_dtype = x.dtype
 
-                        if x.dtype != torch.float32:
-                            x = x.float()
+                        # if x.dtype != torch.float32:
+                        #     x = x.float()
                         
                         residual = x
                         output = self.adapter_up(self.act_fn(self.adapter_down(self.adapter_dropout(x)))).to(expected_dtype) * self.adapter_scaling
@@ -515,8 +517,8 @@ if is_bnb_available():
                     if not torch.is_autocast_enabled():
                         expected_dtype = result_pre_forward.dtype
 
-                        if x.dtype != torch.float32:
-                            x = x.float()
+                        # if x.dtype != torch.float32:
+                        #     x = x.float()
                         
                         output = self.adapter_up(self.act_fn(self.adapter_down(self.adapter_dropout(x)))).to(expected_dtype) * self.adapter_scaling
                         result = result_pre_forward + output
