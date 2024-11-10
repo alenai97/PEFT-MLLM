@@ -68,7 +68,8 @@ TRANSFORMERS_MODELS_TO_BOTTLENECK_TARGET_MODULES_MAPPING = {
     "opt": ["fc1", "fc2"],
     "chatglm": ["dense_h_to_4h", "dense_4h_to_h"],
     "llava":["gate_proj", "up_proj", "down_proj", "k_proj", "q_proj", "v_proj", "o_proj"],
-    "share4v":["gate_proj", "up_proj", "down_proj"]
+    "share4v":["gate_proj", "up_proj", "down_proj"],
+    "qwen": ["w1", "w2", "c_proj"],
 }
 
 TRANSFORMERS_MODELS_TO_ADAPTERP_TARGET_MODULES_MAPPING = {

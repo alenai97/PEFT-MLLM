@@ -23,6 +23,7 @@ TRANSFORMERS_MODELS_TO_ADAPTER_TYPE_MAPPING = {
     "chatglm": {"dense_h_to_4h": "mh_adapter", "dense_4h_to_h": "output_adapter"},
     "llava":{"gate_proj": "mh_adapter", "up_proj":"mh_adapter", "k_proj": "mh_adapter", "q_proj":"mh_adapter", "v_proj": "mh_adapter", "o_proj":"output_adapter","down_proj":"output_adapter"},
     "share4v":{"gate_proj": "mh_adapter", "up_proj":"mh_adapter", "down_proj":"output_adapter"},
+    "qwen": {"w1": "mh_adapter", "w2":"mh_adapter", "c_proj":"output_adapter"},
 }
 
 def is_bnb_available():

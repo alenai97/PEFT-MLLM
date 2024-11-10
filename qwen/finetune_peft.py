@@ -78,7 +78,7 @@ class AdapterArguments:
     non_linearity: str = "tanh"
     adapter_dropout: float = 0.05
     use_parallel_adapter: bool = False
-    adapter_enablep: bool = False
+    use_adapterp: bool = False
     adapter_bias: str = "none"
     adapter_target_modules: List[str] = field(
         default_factory=lambda: ["c_attn", "attn.c_proj", "w1", "w2"] ##["in_proj","out_proj","c_fc"]
@@ -192,7 +192,7 @@ def find_lora_linear_names(model):
     return list(linear_module_names)
 
 def find_adapter_linear_names(model):
-    desired_keywords = ["mlp.c_proj", "w1", "w2"]
+    desired_keywords = ["attn.c_proj", "w1", "w2"]
     linear_module_names = set()
 
     for name, module in model.named_modules():
