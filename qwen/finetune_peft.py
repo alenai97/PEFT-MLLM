@@ -536,7 +536,7 @@ def train():
             )
         model = get_peft_model(model, lora_config)
     elif training_args.adapter_enable:
-        from peft.src.adapter.src.peft import BottleneckConfig, get_peft_model
+        from peft.adapter.peft import BottleneckConfig, get_peft_model
         bottleneck_config = BottleneckConfig(
             bottleneck_size=adapter_args.bottleneck_size,
             adapter_dropout=adapter_args.adapter_dropout,
@@ -556,7 +556,7 @@ def train():
         )
         model = get_peft_model(model, ia3_config)
     elif training_args.prefix_enable:
-        from peft.src.peft import PrefixTuningConfig, get_peft_model
+        from peft.adapter.peft import PrefixTuningConfig, get_peft_model
         prefix_config = PrefixTuningConfig(
             num_virtual_tokens=prefix_args.virtual_tokens,
             inference_mode=prefix_args.inference_mode,
